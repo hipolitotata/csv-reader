@@ -22,10 +22,7 @@ export default function UploadCsv({
       {!isLoading && (
         <>
           <Title>Upload your CSV file</Title>
-          <SubTitle>
-            Please upload your CSV file here. Only files with the extension .csv
-            are accepted.
-          </SubTitle>
+          <SubTitle>Please upload your CSV file here. Only files with the extension .csv are accepted.</SubTitle>
           <DivUpload
             isDragActive={isDragActive}
             isDragReject={isDragReject}

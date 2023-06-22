@@ -42,6 +42,7 @@ export default function ListUsers({
           }}
           placeholder="Search for users..."
           id="search-input"
+          name="searchBar"
           value={searchText}
         />
       </SearchBarContainer>
@@ -91,24 +92,24 @@ export default function ListUsers({
       )}
 
       {listUsers?.length !== 0 && (
-        <ListUserUl>
+        <ListUserUl className="list-users">
           {listUsers?.map((user, key) => (
             <UserItem key={key}>
               <UserImage src="https://cdn.icon-icons.com/icons2/1999/PNG/512/avatar_people_person_profile_student_user_icon_123383.png" />
 
-              <UserContent>
-                <UserName>{user.name}</UserName>
+              <UserContent className="userContent">
+                <UserName className="userName">{user.name}</UserName>
 
-                <UserLocation>
+                <UserLocation className="userSport">
                   <UserLocationImage src="https://gifs.eco.br/wp-content/uploads/2023/02/imagens-de-bola-de-futebol-png-0.png" />
-                  <UserLocationText>
+                  <UserLocationText className="userSportLabel">
                     Favorite Sport: {user.favorite_sport}
                   </UserLocationText>
                 </UserLocation>
 
-                <UserLocation>
+                <UserLocation className="userLocation">
                   <UserLocationImage src="https://www.freepnglogos.com/uploads/pin-png/location-pin-connectsafely-37.png" />
-                  <UserLocationText>
+                  <UserLocationText className="userLocationText">
                     {user.city} - {user.country}
                   </UserLocationText>
                 </UserLocation>

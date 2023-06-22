@@ -60,7 +60,7 @@ export default function useUpload() {
       alert("Data loaded with success !!!")
     } catch (err) {
       if (isAxiosError(err) && err.response?.data.message) {
-        alert(err.response.data.message);
+        alert("Uploaded CSV file is not in the correct format");
       }
 
       console.log(err);

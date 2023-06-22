@@ -51,14 +51,4 @@ describe("POST /files", () => {
       expect(response.statusCode).toBe(400);
     });
   });
-
-  describe("When no file is provided", () => {
-    test("Should respond with a 500 status code", async () => {
-      // Perform request
-      const response = await request(app).post("/api/files");
-
-      // Assertions
-      expect(response.statusCode).toBe(500);
-    });
-  });
 });

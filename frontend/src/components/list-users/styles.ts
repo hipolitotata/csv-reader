@@ -72,6 +72,11 @@ export const UserContent = styled.div`
   margin-top: 10px;
   padding-top: 10px;
   border-top: 1px solid #cfcfcf;
+
+  @media (max-width: 768px) {
+    margin: 0;
+    padding: 0;
+  }
 `;
 
 export const UserLocation = styled.div`
@@ -79,7 +84,6 @@ export const UserLocation = styled.div`
   flex-direction: row;
   align-items: center;
   width: 100%;
-
   margin-top: 10px;
 `;
 
@@ -105,6 +109,11 @@ export const SearchBarContainer = styled.label`
   border-radius: 20px;
   padding: 8px;
   margin: 10px 0;
+
+  @media (max-width: 768px) {
+    margin: 0;
+    padding: 2px 10px;
+  }
 `;
 
 export const SearchBarIcon = styled.img`
