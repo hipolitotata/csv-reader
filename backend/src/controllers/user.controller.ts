@@ -21,6 +21,6 @@ export async function getUsers(req: Request, res: Response) {
 
     res.status(200).send(users);
   } catch (err) {
-    res.status(500).send({ message: "Sorry, we had problems on our server" });
+    res.status(500).send({ message: "Sorry, we encountered an error on our server" });
   }
 }

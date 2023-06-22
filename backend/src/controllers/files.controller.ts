@@ -15,7 +15,7 @@ export async function readCsv(req: Request, res: Response) {
 
       if (validation?.error) {
         return res.status(400).send({
-          message: "The CSV file uplodaded is not in the right schema",
+          message: "Uploaded CSV file is not in the correct format",
           error: validation?.error?.message,
         });
       }
@@ -23,15 +23,15 @@ export async function readCsv(req: Request, res: Response) {
       const createdUsers = await UserModel.insertMany(validation.value);
       res.status(200).send(createdUsers);
     } catch (err) {
-      res.status(500).send({ message: "Sorry, Some error in our server" });
+      res.status(500).send({ message: "Sorry, an error occurred on our server" });
     } finally {
       fs.unlink(pathToFile, (err) => {
         if (err) {
-          console.log("Error while delete CSV file");
+          console.log("Error while deleting the CSV file");
         }
       });
     }
   } else {
-    res.status(500).send({ message: "You need send a CSV file as payload" });
+    res.status(400).send({ message: "You need to send a CSV file as payload" });
   }
 }
