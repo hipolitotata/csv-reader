@@ -66,7 +66,7 @@ export default function ListUsers({
         </FilterOptions>
       </FilterOptionsContainer>
 
-      {listUsers?.length === 0 && !searchText && (
+      {!listUsers || listUsers?.length === 0 && !searchText && (
         <ContainerUsers>
           <SubTitle>
             After you have uploaded the file, the list of users will be

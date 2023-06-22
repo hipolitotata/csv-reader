@@ -30,14 +30,14 @@ export default function UploadCsv({
           >
             <input {...getInputProps()} />
 
-            {isDragAccept && <p>Great ! This file can be uploaded</p>}
+            {isDragAccept && <p>Great, This file can be uploaded</p>}
             {isDragReject && (
               <p>
-                We don't accepted this type of file, please upload a CSV file
+                We dont accepted this type of file, please upload a CSV file
               </p>
             )}
             {!isDragActive && (
-              <p>Drag 'n' drop your csv file, or click to select the file</p>
+              <p>Drag n drop your csv file, or click to select the file</p>
             )}
           </DivUpload>
         </>
